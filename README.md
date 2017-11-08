@@ -1,4 +1,4 @@
-# auto-host-setup
+# auto-ssh-setup
 
 Set up your new server in a matter of seconds.
 I found myself always doing the same procedure while setting up a new server, so I wrote this little script that automates it.
@@ -23,7 +23,7 @@ So, as you can see, it's simple but effective and saves time.
 ```
 cd ~
 git clone https://github.com/leongrdic/auto-ssh-setup.git
-cd auto-host-setup
+cd auto-ssh-setup
 chmod +x setup.sh
 ```
 
