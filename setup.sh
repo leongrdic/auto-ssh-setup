@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 function echoexit {
   echo $1
@@ -89,7 +89,7 @@ echo \"configuring user...\";
 sudo usermod -a -G sudo $username;
 sudo -u$username mkdir -p /home/$username/.ssh;
 sudo -u$username touch /home/$username/.ssh/authorized_keys;
-sudo -u$username echo \"$key\" >> /home/$username/.ssh/authorized_keys;
+echo \"$key\" | sudo -u$username tee /home/$username/.ssh/authorized_keys > /dev/null;
 
 echo \"configuring ssh...\";
 sudo perl -pi -e 's/#PermitRootLogin/PermitRootLogin/g' /etc/ssh/sshd_config;
